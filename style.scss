@@ -1,14 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: #EAFBFF;
+    background-image: linear-gradient(to bottom, #EAFBFF 0%, #EAFBFF 50%, #5290F9 50%, #5290F9 100%);
+    font-family: 'Muli', sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
     margin: 0;
+}
+
+.navigation {
+    background-color: #FFF;
+    padding: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3px);
+    transition: width 0.6s linear;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 0;
+        transition: width 0.6s linear;
+    }
+
+    &-item {
+        transform: rotateY(0deg);
+        opacity: 0;
+        transition: transform 0.6s linear, opacity 0.6s linear;
+
+        a {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    }
+
+    &-icon {
+        //font-size: 0;
+        border: none;
+        background-color: #FFF;
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+
+        .line {
+            background-color: #5290F9;
+            height: 2px;
+            width: 20px;
+            position: absolute;
+            font-size: 12px;
+            top: 10px;
+            left: 5px;
+            transition: transform 0.6s linear;
+        }
+
+        .line2 {
+            top: auto;
+            bottom: 10px;
+        }
+    }
+
+    &--active {
+        width: 350px;
+
+        ul {
+            width: 100%;
+        }
+
+        .navigation-item {
+            opacity: 1;
+            transform: rotateY(360deg);
+        }
+
+        .line1 {
+            transform: rotate(-765deg) translateY(5.5px);
+        }
+
+        .line2 {
+            transform: rotate(765deg) translateY(-5.5px);
+        }
+    }
+
+
 }

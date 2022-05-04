@@ -9,11 +9,23 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="style.css">
-    <title>My Project</title>
+    <title>Animated Navigation</title>
 </head>
 
 <body>
-    <h1>My project</h1>
+    <nav id="nav" class="navigation navigation--active">
+        <ul>
+            <li class="navigation-item"><a href="#">Home</a></li>
+            <li class="navigation-item"><a href="#">Works</a></li>
+            <li class="navigation-item"><a href="#">About</a></li>
+            <li class="navigation-item"><a href="#">Contact</a></li>
+        </ul>
+        <button id="toggle" class="navigation-icon">
+            <!-- toggle Menu -->
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+        </button>
+    </nav>
     <script src="script.js"></script>
 </body>
 
